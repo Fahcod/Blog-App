@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+/* adding a custom font */
+@font-face{
+    font-family:'Rubik-R';
+    src:('./assets/fonts/Rubik-Regular.ttf')
+}
+
+@font-face {
+    font-family:'Rubik-Light';
+    src: url('./assets/fonts/Rubik-Light.ttf');
+}
+
+@font-face {
+    font-family:'Rubik-Bold';
+    src: url('./assets/fonts/Rubik-Bold.ttf');
+}
+
+@font-face {
+    font-family:'Rubik-Extrabold';
+    src: url('./assets/fonts/Rubik-ExtraBold.ttf');
+}
+
+@font-face {
+    font-family:'Rubik-Medium';
+    src: url('./assets/fonts/Rubik-Medium.ttf');
+}
