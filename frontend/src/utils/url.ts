@@ -1,2 +1,2 @@
 
-export const url:string="http://localhost:4500"
+export const url:string="https://blog-app-api-5qzg.onrender.com"
