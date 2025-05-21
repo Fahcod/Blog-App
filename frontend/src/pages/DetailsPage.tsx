@@ -35,7 +35,7 @@ const DetailsPage = () => {
     <p className="text-white/60 font-[Rubik-Light]">{activeBlog?.description}</p>
     <hr className="my-3 outline-none border-none h-[1px] bg-white/10"/>
     <div className="w-full flex items-center py-3 justify-between">
-    <div className="flex items-center gap-2">
+    <div className="md:flex hidden items-center gap-2">
     <div>
     <img src={images.image1} className="w-[39px] h-[39px] md:w-11 md:h-11 rounded-full object-cover"/>
     </div>
