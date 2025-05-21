@@ -73,7 +73,7 @@ def signup_user(userObj:UserModel):
        "message":"Account created successfully"
        }
        response=JSONResponse(content=content,status_code=201)
-       response.set_cookie(key='blgauth',value=token,httponly=True,secure=True,expires=1000 * 60 * 60 * 24 * 30)
+       response.set_cookie(key='blgauth',value=token,httponly=True,secure=True,samesite='none',expires=1000 * 60 * 60 * 24 * 30)
 
        return response
         
@@ -113,7 +113,7 @@ def login_user(userObj:LoginModel):
         "message":"Logged in successfully"
         }
         response=JSONResponse(content=content,status_code=201)
-        response.set_cookie(key='blgauth',value=token,httponly=True,secure=True,expires=1000 * 60 * 60 * 24 * 30)
+        response.set_cookie(key='blgauth',value=token,httponly=True,samesite='none',secure=True,expires=1000 * 60 * 60 * 24 * 30)
         return response
     # try finding the user 
     except Exception as e:
@@ -131,7 +131,7 @@ def update_profile(userData:ProfileUpdate):
         profile_pic=data["profile"]
         userId=data["user_id"]
         users_collection.update_one({"_id":ObjectId(userId)},{'$set':{"profile":profile_pic,"username":username}})
-        response = {
+        response={
             "status":201,
             "message":"Profile updated successfully"
         }
