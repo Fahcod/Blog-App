@@ -12,7 +12,7 @@ app = FastAPI(description='This is the blog app api')
 #enable cross origin
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
+    allow_origins=["http://localhost:5173","https://blogspot-app.onrender.com"],
     allow_credentials=True,
     allow_methods=["GET","POST","PUT","DELETE"],
     allow_headers=["*"]
